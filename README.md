@@ -1,7 +1,7 @@
 # NHS Sub-ICB Liquid Paracetamol Prescribing Analysis
 ### An Exploratory Data Analysis of Liquid vs Non-Liquid Paracetamol Prescribing Across England (2020/21 – 2024/25)
 
----
+
 
 ## Overview
 
@@ -10,13 +10,9 @@ This project analyses NHS prescribing data for paracetamol across 106 Sub-Integr
 Liquid paracetamol costs significantly more per dose than tablet equivalents. This analysis explores how prescribing volumes and costs have changed over time nationally, and how patterns vary across Sub-ICBs — with the aim of describing what the data shows rather than making judgements about clinical appropriateness, which would require patient-level data beyond the scope of this dataset.
 
 **Tools used:** Python · pandas · matplotlib · seaborn  
-**Data source:** [NHS Business Services Authority (NHSBSA)](https://www.nhsbsa.nhs.uk/)  
-**Notebook:** [`Sub_ICB_Paracetamol_Analysis_v2.ipynb`](Sub_ICB_Paracetamol_Analysis_v2.ipynb)
+**Data source:** [NHS Business Services Authority (NHSBSA)]([https://www.nhsbsa.nhs.uk/](https://nhsbsa-data-analytics.github.io/liquid-paracetamol-prescribing-care-homes/#liquid-paracetamol-prescribing-costs-for-care-homes-patients-have-increased))  
+**Notebook:** [`Sub_ICB_Paracetamol_Analysis_v2.ipynb`](Sub_ICB_Paracetamol_Analysis_v3.ipynb)
 
-> **To run interactively:** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR-USERNAME/nhs-paracetamol-prescribing-analysis/HEAD)  
-> *(Replace `YOUR-USERNAME` with your GitHub username after uploading)*
-
----
 
 ## Table of Contents
 
@@ -30,9 +26,7 @@ Liquid paracetamol costs significantly more per dose than tablet equivalents. Th
 8. [Trends for the Ten Highest-Cost Sub-ICBs](#8-trends-for-the-ten-highest-cost-sub-icbs)
 9. [Summary of Findings](#9-summary-of-findings)
 10. [Limitations](#10-limitations)
-11. [How to Reproduce](#11-how-to-reproduce)
 
----
 
 ## 1. Dataset
 
@@ -51,11 +45,11 @@ The dataset contains Sub-ICB level NHS prescribing data with the following struc
 | `Percentage of patients` | Liquid as % of total paracetamol patients in that Sub-ICB |
 
 - **106** Sub-ICBs · **5** financial years · **no missing values**
-- Each Sub-ICB appears twice per year — once for liquid and once for non-liquid
+- Each Sub-ICB appears twice per year, once for liquid and once for non-liquid
 
 ---
 
-## 2. National Trends — Volume, Cost, and Patients
+## 2. National Trends : Volume, Cost, and Patients
 
 ![Figure 1 — National Liquid Paracetamol Prescribing Volume, Cost, and Patients](images/fig1_national_volume_cost_patients.png)
 
@@ -179,24 +173,6 @@ All ten highest-spending Sub-ICBs show a broadly similar upward cost trajectory,
 
 ---
 
-## 11. How to Reproduce
 
-**Requirements:** Python 3.8+, pandas, matplotlib, seaborn, numpy
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR-USERNAME/nhs-paracetamol-prescribing-analysis.git
-cd nhs-paracetamol-prescribing-analysis
-
-# Install dependencies
-pip install pandas matplotlib seaborn numpy jupyter
-
-# Run the notebook (this also generates all chart images)
-jupyter notebook Sub_ICB_Paracetamol_Analysis_v2.ipynb
-```
-
-Running all cells will automatically create an `images/` folder and save all figures as `.png` files, which the README uses to display the charts.
-
----
 
 *Analysis prepared using publicly available NHS prescribing data. Data licence: please refer to [NHSBSA Open Data](https://www.nhsbsa.nhs.uk/access-our-data-products) for terms of reuse.*
